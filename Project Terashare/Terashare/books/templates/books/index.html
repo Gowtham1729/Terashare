@@ -1,0 +1,15 @@
+{% extends 'books/base.html' %}
+{% block body %}
+<h2>
+    Here are the list of courses
+</h2>
+{% if object_list %}
+    {% for course in object_list %}
+    <ul>
+        <li><a href="{% url 'books:folders' course.id %}">{{ course }}</a></li>
+    </ul>
+    {% endfor %}
+{% else %}
+    <h2>You don't have any Courses</h2>
+{% endif %}
+{% endblock %}

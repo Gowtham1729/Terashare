@@ -1,0 +1,32 @@
+<style>
+    p{
+        color: white;
+        font-size: large;
+    }
+    a{
+        color: white;
+        font-size: large;
+    }
+</style>
+{% extends 'books/base.html' %}
+{% block body %}
+    <p><a href='{% url 'books:index' %}'>Courses</a> / <a href="{% url 'books:folders' course.id %}">{{ course }}</a> / {{ folder }}</p>
+<script type="text/javascript">
+      var flag = false
+    </script>
+    {% for file in all_files %}
+        {% if file.file_type == folder and file.course == course %}
+            <script type="text/javascript">
+                var flag = true
+            </script>
+            <ul>
+                <li><a href="{% url 'books:download' course_id folder_id%}">{{ file }}</a></li>
+            </ul>
+        {% endif %}
+    {% endfor %}
+<script type="text/javascript">
+if (flag == false) {
+    document.write("<h2>Sorry!No files are present</h2>")
+}
+</script>
+{% endblock %}

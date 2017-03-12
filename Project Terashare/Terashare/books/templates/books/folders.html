@@ -1,0 +1,23 @@
+<style>
+    p{
+        color: white;
+        font-size: large;
+    }
+    a{
+        color: white;
+        font-size: large;
+    }
+</style>
+{% extends 'books/base.html' %}
+{% block body %}
+    <p><a href='{% url 'books:index' %}'>Courses</a> / {{ course }}</p>
+{% if all_folders %}
+    <ul>
+    {% for folder in all_folders %}
+        <li><a href="{% url 'books:files' course_id folder.id %}">{{ folder }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <h1>No folder exists for this course</h1>
+{% endif %}
+{% endblock %}

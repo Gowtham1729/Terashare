@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+.navbar
+{
+	margin-bottom: 0px;
+	border-radius: 0px;
+	font-family: 'Rubik', sans-serif;
+}
+body
+{
+	padding: 0px;
+	background-color: #222222;
+}
+.container-fluid
+{
+	padding: 0px;
+}
+.menubars,.navbar-brand
+{
+	color: #ffffff !important;
+	-webkit-transition: all 500ms ease;
+-moz-transition: all 500ms ease;
+-ms-transition: all 500ms ease;
+-o-transition: all 500ms ease;
+transition: all 500ms ease;
+}
+.menubars:hover,.navbar-brand:hover
+{
+	color: #9d9d9d !important;
+	-webkit-transition: all 500ms ease;
+-moz-transition: all 500ms ease;
+-ms-transition: all 500ms ease;
+-o-transition: all 500ms ease;
+transition: all 500ms ease;
+}
+.navbar-brand
+{
+	font-size: 20px;
+}
+.menubars {
+    font-size: 16px;
+}
